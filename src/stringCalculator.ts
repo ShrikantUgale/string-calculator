@@ -24,7 +24,10 @@ export function add(numbers: string): number {
   }
 
   // Convert string to array of numbers
-  const numberArray = normalizedNumbers.split(",").map((num) => Number(num));
+  const numberArray = normalizedNumbers
+    .split(",")
+    .map(Number) // Converts to Number
+    .filter((num) => num <= 1000); // Consider numbers smaller than 1000
 
   return numberArray.reduce((sum, num) => sum + num, 0);
 }
