@@ -14,6 +14,15 @@ export function add(numbers: string): number {
   // Replace newlines with commas
   const normalizedNumbers = numbers.replace(/\n/g, ",");
 
+  // Check for negative numbers
+  const negatives = normalizedNumbers
+    .split(",")
+    .filter((num) => Number(num) < 0);
+
+  if (negatives.length > 0) {
+    throw new Error("negative numbers not allowed " + negatives.join(","));
+  }
+
   // Convert string to array of numbers
   const numberArray = normalizedNumbers.split(",").map((num) => Number(num));
 
