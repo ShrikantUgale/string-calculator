@@ -42,4 +42,16 @@ describe("String Calculator", () => {
       "negative numbers not allowed -2,-4"
     );
   });
+
+  test("ignores numbers greater than 1000", () => {
+    expect(add("2,1001")).toBe(2);
+  });
+
+  test("ignores numbers greater than 1000 with newlines", () => {
+    expect(add("2\n1001")).toBe(2);
+  });
+
+  test("ignores numbers greater than 1000 with custom delimiters", () => {
+    expect(add("//;\n2;1001")).toBe(2);
+  });
 });
