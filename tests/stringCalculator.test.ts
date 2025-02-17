@@ -23,11 +23,23 @@ describe("String Calculator", () => {
 
   test('handles custom delimiter ";"', () => {
     expect(add("//;\n1;2")).toBe(3);
-  });
-
-  test('handles custom delimiter ";"', () => {
-    expect(add("//;\n1;2")).toBe(3);
     expect(add("//:\n1:2")).toBe(3);
     expect(add("//>\n1>2")).toBe(3);
+  });
+
+  test("throws an exception for a single negative number", () => {
+    expect(() => add("-1")).toThrow("negative numbers not allowed -1");
+  });
+
+  test("throws an exception when negative numbers are present", () => {
+    expect(() => add("1,-2,3,-4")).toThrow(
+      "negative numbers not allowed -2,-4"
+    );
+  });
+
+  test("throws an exception when negative numbers are present with custom delimiter", () => {
+    expect(() => add("//;\n1;-2;3;-4")).toThrow(
+      "negative numbers not allowed -2,-4"
+    );
   });
 });
