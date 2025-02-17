@@ -16,4 +16,8 @@ describe("String Calculator", () => {
   test("returns the sum of multiple comma-separated numbers", () => {
     expect(add("1,2,3,4,5")).toBe(15);
   });
+
+  test("returns the sum of numbers separated by newlines or commas", () => {
+    expect(add("1\n2,3")).toBe(6);
+  });
 });
