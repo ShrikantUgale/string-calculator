@@ -8,10 +8,10 @@ This is a simple string calculator implemented using **Node.js** and **TypeScrip
 
 ### 1️⃣ Clone the Repository
 
-\`\`\`sh
+```sh
 git clone https://github.com/ShrikantUgale/string-calculator.git
 cd string-calculator
-\`\`\`
+```
 
 ### 2️⃣ Install Dependencies
 
