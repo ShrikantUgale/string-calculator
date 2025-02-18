@@ -1,3 +1,5 @@
+cat <<EOL > README.md
+
 # String Calculator (TDD Approach)
 
 This is a simple string calculator implemented using **Node.js** and **TypeScript**, following **Test-Driven Development (TDD)** principles.
