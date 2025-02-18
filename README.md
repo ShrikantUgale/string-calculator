@@ -1,5 +1,3 @@
-cat <<EOL > README.md
-
 # String Calculator (TDD Approach)
 
 This is a simple string calculator implemented using **Node.js** and **TypeScript**, following **Test-Driven Development (TDD)** principles.
@@ -15,13 +13,13 @@ cd string-calculator
 
 ### 2️⃣ Install Dependencies
 
-\`\`\`sh
+\\\sh
 npm install
-\`\`\`
+\\\
 
 ### 3️⃣ Run Tests
 
 To run the tests using Jest, execute:
-\`\`\`sh
+\\\sh
 npm test
-\`\`\`
+\\\
