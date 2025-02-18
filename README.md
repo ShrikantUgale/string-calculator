@@ -13,13 +13,14 @@ cd string-calculator
 
 ### 2️⃣ Install Dependencies
 
-\\\sh
+```sh
 npm install
-\\\
+```
 
 ### 3️⃣ Run Tests
 
 To run the tests using Jest, execute:
-\\\sh
+
+```sh
 npm test
-\\\
+```
